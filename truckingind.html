@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="EtashDeliveries">
+        <!-- ======== Page title ============ -->
+        <title>Etash Deliveries</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/etashlogo2.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="assets/css/color.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+    </head>
+    <body>
+
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="H" class="letters-loading">
+                        H
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <!-- Back To Top Start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/etashlogo2.png" alt="logo-img">
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Nijom Path, Sixmile, Guwahati-781022</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="mailto:business@etashdeliveries.com"><span class="mailto:business@etashdeliveries.com">business@etashdeliveries.com</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="#">Mon-Sat, 09:30am-06:30pm
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="tel:+11002345909">+91-7099070701
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="contact.html" class="theme-btn text-center">
+                                    <span>Get A Quote<i class="fa-solid fa-arrow-right-long"></i></span>
+                                </a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header class="header-section-2">
+            <div class="container-fluid">
+                <div class="header-top-wrapper-2">
+                    <ul class="contact-list">
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <a href="business@etashdeliveries.com">business@etashdeliveries.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            #1, Nijom Path, SixMile, Guwahati, Assam
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-phone"></i>
+                            <a href="tel:+91-70990-70701">+91-70990-70701</a>                        
+                        </li>
+                    </ul>
+                    <div class="top-right">
+                        <ul class="text-list">
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Terms & Conditions</a></li>
+                        </ul>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-sticky" class="header-2">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main">
+                            <div class="header-left">
+                                <div class="logo">
+                                    <a href="index.html" class="header-logo">
+                                        <img src="assets/img/logo/etashlogo.png" alt="logo-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex justify-content-end align-items-center">
+                                <div class="mean__menu-wrapper">
+                                    <div class="main-menu">
+                                        <nav id="mobile-menu">
+                                            <ul>
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="index.html">
+                                                    Home 
+                                                        <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu has-homemenu">
+                                                        <li>
+                                                            <div class="homemenu-items">
+                                                                <div class="homemenu">
+                                                                    <div class="homemenu-thumb">
+                                                                        <img src="assets/img/header/home-1.jpg" alt="img">
+                                                                        <div class="demo-button">
+                                                                            <a href="index.html" class="theme-btn">
+                                                                                Multi Page
+                                                                            </a>
+                                                                            <a href="index-one-page.html" class="theme-btn">
+                                                                                One Page
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="homemenu-content text-center">
+                                                                        <h4 class="homemenu-title">
+                                                                            Home 01
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="homemenu">
+                                                                    <div class="homemenu-thumb mb-15">
+                                                                        <img src="assets/img/header/home-2.jpg" alt="img">
+                                                                        <div class="demo-button">
+                                                                            <a href="index-2.html" class="theme-btn">
+                                                                                Multi Page
+                                                                            </a>
+                                                                            <a href="index-two-page.html" class="theme-btn">
+                                                                                One Page
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="homemenu-content text-center">
+                                                                        <h4 class="homemenu-title">
+                                                                            Home 02
+                                                                        </h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="team.html" class="border-none">
+                                                    Home
+                                                    <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="index.html">Home 01</a></li>
+                                                        <li><a href="index-2.html">Home 02</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="about.html">About Us</a>
+                                                </li>
+                                                <li class="has-dropdown">
+                                                    <a href="news.html">
+                                                        Pages
+                                                        <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li class="has-dropdown">
+                                                            <a href="team-details.html">
+                                                                Our Team
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </a>
+                                                            <ul class="submenu">
+                                                                <li><a href="team.html">Our Team</a></li>
+                                                                <li><a href="team-details.html">Team Details</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="pricing.html">Pricing</a></li>
+                                                        <li><a href="faq.html">Faq's</a></li>
+                                                        <li><a href="404.html">404 Page</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="service-details.html">
+                                                        Services
+                                                        <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="service.html">Services</a></li>
+                                                        <li><a href="service-details.html">Service Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="project.html">
+                                                        Projects
+                                                        <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="project.html">Projects</a></li>
+                                                        <li><a href="project-details.html">Project Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="news.html">
+                                                        Blog
+                                                        <i class="fa-regular fa-plus"></i>
+                                                    </a>
+                                                    <ul class="submenu">
+                                                        <li><a href="news-grid.html">Blog Grid</a></li>
+                                                        <li><a href="news.html">Blog Standard</a></li>
+                                                        <li><a href="news-details.html">Blog Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="contact.html">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="header-button">
+                                    <a href="contact.html" class="theme-btn">GAT A QUOTE <i class="fa-regular fa-arrow-right"></i></a>
+                                </div>
+                                <div class="search-item">
+                                    <a href="#0" class="search-trigger search-icon"><i class="fal fa-search"></i></a>
+                                    <div class="header__hamburger d-xl-block my-auto">
+                                        <div class="sidebar__toggle">
+                                            <i class="fas fa-bars"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> 
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb.bg.jpg');">
+            <div class="shape-image float-bob-y">
+                <img src="assets/img/vector.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="breadcrumb-wrapper-items">
+                    <div class="page-heading">
+                        <div class="breadcrumb-sub-title">
+                            <h1 class="wow fadeInUp" data-wow-delay=".3s">Etash Trucking</h1>
+                        </div>
+                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                            <li>
+                                <a href="index.html">
+                                Home
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                            </li>
+                            <li>
+                                Project details
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Details Section Start -->
+        <section class="project-details-section fix section-padding">
+            <div class="container">
+                <div class="project-details-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="project-details-items">
+                                <div class="details-image">
+                                    <img src="assets/img/project/GAUZ1.jpeg" alt="img">
+                                </div>
+                                <div class="project-details-content">
+                                    <h2> Etash Trucking Services</h2>
+                                    <h3>Powering the Backbone of Our Success</h3>
+                                    <p class="mb-3 mt-3">At Etash, trucking isn’t just a service—it’s the driving force behind our success. As the primary revenue-generating pillar of our company, our rapidly expanding fleet delivers unparalleled transportation solutions across Northeast and the entire country. With a diverse lineup of container and open-body trucks ranging from 8 to 32 feet and load capacities from 0.5 to 42 tonnes, we move businesses forward with speed, precision, and reliability.</p>                             
+                                    <p class="mb-3 mt-3">"Driven by Excellence, Powered by Trust" </p>
+                                    <div class="project-infor-wrapper">
+                                        <div class="row g-4">
+                                            <div class="col-xl-7">
+                                                <h2>We Offer</h2>
+                                                <br> <!-- Added line space -->
+                                                <h3>🚚 Full Truckload</h3>
+                                                <p class="mt-3 mb-3">Full Truckload (FTL) service offers exclusive, end-to-end transportation for large shipments, ensuring speed, security, and efficiency. With a fleet of container and open-body trucks, we handle bulk freight with ease. Our direct delivery routes guarantee faster transit times with no intermediate stops, minimizing handling risks. Whether you're transporting heavy cargo or large-volume shipments, Etash FTL ensures reliable, cost-effective, and timely deliveries across the entire country</p>
+                                                 <ul class="details-list">
+                                                    <li><i class="fa-solid fa-circle-check"></i>Faster Transit</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i>Heavy-Duty Capacities</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i>Tailored Solutions</li>
+                                                </ul>
+                                                <p>
+                                                    <br> <!-- Added line space -->
+                                                    <h3>💡 Partial Truckload</h3>
+                                                    <p class="mt-3 mb-3"> Partial Truckload (PTL) service offers a cost-effective and flexible solution for medium-sized shipments that don’t require a full truck. By sharing truck space with other cargo, we help businesses reduce transportation costs without compromising on speed or reliability.  Our strategically located delivery centers ensure faster transit times with minimal handling. With a rapidly expanding fleet, we guarantee secure, efficient, and on-time deliveries, making PTL an ideal choice for businesses seeking optimized logistics solutions.</p>
+                                                    <ul class="details-list">
+                                                        <li><i class="fa-solid fa-circle-check"></i>Optimized Costs</li>
+                                                        <li><i class="fa-solid fa-circle-check"></i>Flexible Scheduling</li>
+                                                        <li><i class="fa-solid fa-circle-check"></i>Efficient Handling</li>
+                                                    </ul>
+                                                </p>
+                                                <br> <!-- Added line space -->
+                                                <h3>🔥 Dedicated Contract Carriage</h3> 
+                                                <p class="mt-3 mb-3">Our Dedicated Contract Carriage (DCC) service offers exclusive, tailor-made transportation solutions designed for businesses with recurring shipping needs. With a dedicated fleet of container and open-body trucks ranging from 8 to 32 feet and load capacities of up to 42 tonnes, we provide consistent, reliable, and on-time deliveries. Our DCC service ensures fixed routes, pre-scheduled pickups, and predictable logistics costs, giving you full control over your supply chain. By minimizing handling points and ensuring faster transit times, we help businesses enhance efficiency and customer satisfaction.</p>
+                                                 <ul class="details-list">
+                                                    <li><i class="fa-solid fa-circle-check"></i>Guaranteed Fleet Access</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i>Cost-Effective Operations</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i>Consistent Reliability</li>
+                                                </ul>
+                                                <p>
+                                                </p>
+                                                <br> <!-- Added line space -->
+                                                <h3>🚀 Expanding with Versatility & Efficiency</h3>
+                                                <p class="mt-3 mb-3">With the rising demand for reliable and efficient transportation, Etash is rapidly expanding its fleet to enhance capacity, coverage, and service excellence. Our growing lineup of vehicles ensures we meet the diverse logistical needs of our clients while maintaining speed, safety, and precision.</p>
+                                                 <ul class="details-list">
+                                                    <li><i class="fa-solid fa-circle-check"></i> Container Trucks (20-32 feet)</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i> Open-Body Trucks (8-32 feet)</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i> Light-Duty Vehicles</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i> Heavy-Duty Trucks (up to 42 tonnes)</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i> Temperature-Controlled Trucks</li>
+                                                    <li><i class="fa-solid fa-circle-check"></i> Electric 3-Wheelers</li>
+                                                </ul>
+                                                <p>
+                                            </div>
+                                            <div class="col-xl-5">
+                                                <div class="project-nformation">
+                                                    <h4>FLEET INFO</h4>
+                                                    <ul>
+                                                        <li>
+                                                            FLEET SIZE:
+                                                            <span>500+ VEHICLES</span>
+                                                        </li>
+                                                        <li>
+                                                            FLEET TYPE:
+                                                            <span>8Ft - 32Ft CONTAINER & OPEN BODY TRUCKS</span>
+                                                        </li>
+                                                        <li>
+                                                            WEIGHT CAPACITY:
+                                                            <span>0.5 - 42 TONNES</span>
+                                                        </li>
+                                                        <li>
+                                                            ROUTES:
+                                                            <span>PAN INDIA</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <h2 class="mt-3 mb-3">🌿 Driving Towards a Sustainable Tomorrow</h2>
+                                    <h4 class="mt-3 mb-3">“Expanding with power, delivering with purpose.” 🚚🌿</h4>
+                                    <p class="mt-3">At Etash, we believe that growth and sustainability go hand in hand. Our investment in electric vehicles (EVs) reflects our commitment to eco-friendly transportation, reducing fuel consumption and emissions. With each new EV added to our fleet, we are taking a step closer toward a cleaner, greener, and more responsible logistics ecosystem.</p>
+                                    <p class=""mt-3>As part of our eco-conscious expansion, Etash has introduced electric 3-wheelers into its fleet. These zero-emission vehicles reduce our carbon footprint while offering cost-effective, sustainable transportation for smaller cargo loads. By integrating EVs into our operations, we are actively contributing to a greener future, promoting clean logistics solutions.</p>
+                                    <br> <!-- Added line space -->
+                                    <br> <!-- Added line space -->
+                                    <div class="row g-4">
+                                        <h2 class="mt-3 mb-3">OUR FLEET</h2>
+                                        <br> <!-- Added line space -->
+                                        <h4 class="mt-3 mb-3">COMMERCIAL EVs & PIK-UP</h4>
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/evs.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/bolero.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-3 mb-3">LIGHT & MEDIUM COMMERCIAL VEHICLES</h4>
+                                    <br> <!-- Added line space -->
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/Lcvs.png" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/bolero.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="mt-3 mb-3">HEAVY COMMERCIAL VEHICLES</h4>
+                                    <br> <!-- Added line space -->
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/32feet.jpg" alt="img">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="details-image">
+                                                <img src="assets/img/project/trailer.png" alt="img">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Brand Section Start -->
+       <div class="brand-section fix section-padding">
+        <div class="container">
+            <div class="swiper brand-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/png-transparent-logo-amazon-com-brand-flipkart-others-text-orange-logo-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/flipkart_official-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/images-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/bigbasket-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/DHL-Emblem-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/640px-MAHINDRA_LOGISTICS_LOGO-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/png-transparent-godrej-group-logo-advertising-godrej-properties-limited-business-mattresse-furniture-company-text-thumbnail-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Amul-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Safexpress_logo-removebg-preview (1) (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/logo_Red-1-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/ferns_petals_loga-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/akshaya (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Excel_Foods-removebg-preview (1).png" alt="img">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/tcpl-removebg-preview (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Axom-Tales-Logo-Black-removebg-preview (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/smfreshy-logo-big-removebg-preview (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Local-removebg-preview (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/Rajudress (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/indinex (1).png" alt="img">
+                        </div> 
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="brand-image center">
+                            <img src="assets/img/brand/online-express (1).png" alt="img">
+                        </div> 
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+       <!-- Footer Section Start -->
+       <footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/footer/bg.jpg');">
+        <div class="container">
+            <div class="contact-info-area">
+                <a href="index.html" class="logo-img wow fadeInUp" data-wow-delay=".2s">
+                    <img src="assets/img/logo/etashlogo.png" alt="img">
+                </a>
+                <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
+                    <div class="icon">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="content">
+                        <p>Office location</p>
+                        <h3>
+                            Nijom Path, Sixmile, Guwahati
+                        </h3>
+                    </div>
+                </div>
+                <div class="contact-info-items wow fadeInUp" data-wow-delay=".6s">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="content">
+                        <p>send email</p>
+                        <h3>
+                            <a href="mailto:example@gmail.com">business@etashdeliveries.com</a>
+                        </h3>
+                    </div>
+                </div>
+                <div class="contact-info-items wow fadeInUp" data-wow-delay=".8s">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="content">
+                        <p>call emergency</p>
+                        <h3>
+                            <a href="tel:+88012365499">+91 7099070701</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-widgets-wrapper">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>About Company</h5>
+                            </div>
+                            <div class="footer-content">
+                                <p>
+                                    Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding. 
+                                <div class="social-icon d-flex align-items-center">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Quick Link</h5>
+                            </div>
+                            <ul class="list-area">
+                                <li>
+                                    <a href="about.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        About Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="news.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Blog & News
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        FAQ’S
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Login / Register
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                         <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Our Services</h5>
+                            </div>
+                            <ul class="list-area">
+                                <li>
+                                    <a href="service-details.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        What We Do
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Request a Freight
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Track & Trace
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Rail Freight
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="service-details.html">
+                                        <i class="fa-solid fa-chevrons-right"></i>
+                                        Maritime Transport
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="single-footer-widget">
+                            <div class="widget-head">
+                                <h5>Instagram</h5>
+                            </div>
+                            <div class="footer-gallery">
+                                <div class="gallery-wrap">
+                                    <div class="gallery-item">
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-1.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-1.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-2.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-2.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-3.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-3.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item">
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-4.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-4.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-5.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-5.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="thumb">
+                                            <a href="assets/img/footer/gallery-6.jpg" class="img-popup">
+                                                <img src="assets/img/footer/gallery-6.jpg" alt="gallery-img">
+                                                <div class="icon">
+                                                    <i class="far fa-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© All Copyright 2025 by <a href="index.html">EtashDeliveries</p>
+            </div>
+        </div>
+    </footer> 
+    
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
