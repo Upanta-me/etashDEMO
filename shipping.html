@@ -31,6 +31,88 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
         <style>
+            .job-card {
+                background: #fff;
+                border-radius: 10px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            .job-card h3 {
+                color: #333;
+                margin-bottom: 15px;
+            }
+            .job-card .location {
+                color: #666;
+                margin-bottom: 15px;
+            }
+            .job-card .description {
+                margin-bottom: 20px;
+            }
+            .apply-btn {
+                background: #007bff;
+                color: #fff;
+                padding: 10px 25px;
+                border-radius: 5px;
+                text-decoration: none;
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
+            .apply-btn:hover {
+                background: #0056b3;
+                color: #fff;
+            }
+            .application-form {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 1000;
+            }
+            .form-container {
+                position: relative;
+                background: #fff;
+                width: 90%;
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 30px;
+                border-radius: 10px;
+            }
+            .close-form {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .form-group {
+                margin-bottom: 20px;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .form-group input {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            .submit-btn {
+                background: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .submit-btn:hover {
+                background: #0056b3;
+            }
+            
             /* Logo Animation Styles */
             .logo-container {
                 position: relative;
@@ -65,14 +147,160 @@
                 transform: scale(1.05);
             }
             
-            .logo-img.fade-in {
-                opacity: 1;
-                transform: scale(1);
-            }
-        </style>
+                         .logo-img.fade-in {
+                 opacity: 1;
+                 transform: scale(1);
+             }
+             
+             /* Partner Form Styles */
+             .form-section-title {
+                 color: #2c5aa0;
+                 font-weight: 600;
+                 margin-bottom: 20px;
+                 padding-bottom: 10px;
+                 border-bottom: 2px solid #e8f2ff;
+                 position: relative;
+             }
+             
+             .form-section-title::after {
+                 content: '';
+                 position: absolute;
+                 bottom: -2px;
+                 left: 0;
+                 width: 50px;
+                 height: 2px;
+                 background: #2c5aa0;
+             }
+             
+             .form-check {
+                 margin-top: 20px;
+             }
+             
+             .form-check-label {
+                 font-size: 14px;
+                 color: #666;
+             }
+             
+             .form-check-label a {
+                 color: #2c5aa0;
+                 text-decoration: none;
+             }
+             
+             .form-check-label a:hover {
+                 text-decoration: underline;
+             }
+             
+             .contact-info-area .contact-info-items {
+                 background: #f8f9fa;
+                 padding: 25px;
+                 border-radius: 10px;
+                 margin-bottom: 20px;
+                 border-left: 4px solid #2c5aa0;
+             }
+             
+             .contact-info-area .contact-info-items .icon {
+                 background: #2c5aa0;
+                 color: white;
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 margin-bottom: 15px;
+             }
+             
+             .contact-info-area .contact-info-items h4 {
+                 color: #2c5aa0;
+                 margin-bottom: 10px;
+             }
+             
+             .contact-info-area .contact-info-items ul {
+                 list-style: none;
+                 padding: 0;
+                 margin: 0;
+             }
+             
+             .contact-info-area .contact-info-items ul li {
+                 padding: 3px 0;
+                 color: #666;
+             }
+             
+             /* Breadcrumb Text Visibility */
+             .breadcrumb-wrapper {
+                 position: relative;
+             }
+             
+             .breadcrumb-wrapper::before {
+                 content: '';
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                 background: rgba(0, 0, 0, 0.6);
+                 z-index: 1;
+             }
+             
+             .breadcrumb-wrapper-items {
+                 position: relative;
+                 z-index: 2;
+                 color: white;
+                 text-align: center;
+                 padding: 80px 0;
+             }
+             
+             .breadcrumb-wrapper-items h2 {
+                 color: white;
+                 font-size: 2.5rem;
+                 font-weight: 700;
+                 margin-bottom: 15px;
+                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+             }
+             
+             .breadcrumb-sub-title p {
+                 color: #f8f9fa;
+                 font-size: 1.1rem;
+                 margin-bottom: 25px;
+                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+             }
+             
+             .breadcrumb-items {
+                 list-style: none;
+                 padding: 0;
+                 margin: 0;
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 gap: 15px;
+             }
+             
+             .breadcrumb-items li {
+                 color: #f8f9fa;
+                 font-weight: 500;
+                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+             }
+             
+             .breadcrumb-items li a {
+                 color: #ffffff;
+                 text-decoration: none;
+                 transition: color 0.3s ease;
+             }
+             
+             .breadcrumb-items li a:hover {
+                 color: #2c5aa0;
+             }
+             
+             .breadcrumb-items li:not(:last-child)::after {
+                 content: '>';
+                 margin-left: 15px;
+                 color: #f8f9fa;
+             }
+         </style>
     </head>
     <body>
 
+        <!-- Preloader Start -->
         <!-- Preloader Start -->
         <div id="preloader" class="preloader">
             <div class="animation-preloader">
@@ -142,6 +370,7 @@
                             </div>
                         </div>
                         <p class="text d-none d-xl-block">
+                            Etash Delivery Technologies Pvt. Ltd. is a comprehensive logistics service provider specializing in transportation, warehousing, and distribution solutions across Northeast India and North Bengal.
                         </p>
                         <div class="mobile-menu fix mb-3"></div>
                         <div class="offcanvas__contact">
@@ -196,7 +425,6 @@
             </div>
         </div>
         <div class="offcanvas__overlay"></div>
-
 
         <!-- Header Section Start -->
         <header class="header-section-2">
@@ -258,7 +486,7 @@
                                                 <li>
                                                     <a href="service.html">
                                                         Services
-                                                        
+                                                       
                                                     </a>
                                                     <ul class="submenu">
                                                         
@@ -297,273 +525,239 @@
             </div>
         </header> 
 
-        <!-- Search Area Start -->
-        <div class="search-wrap">
-            <div class="search-inner">
-                <i class="fas fa-times search-close" id="search-close"></i>
-                <div class="search-cell">
-                    <form method="get">
-                        <div class="search-field-holder">
-                            <input type="search" class="main-search-input" placeholder="Search...">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+                 <!-- Search Area Start -->
+         <div class="search-wrap">
+             <div class="search-inner">
+                 <i class="fas fa-times search-close" id="search-close"></i>
+                 <div class="search-cell">
+                     <form method="get">
+                         <div class="search-field-holder">
+                             <input type="search" class="main-search-input" placeholder="Search...">
+                         </div>
+                     </form>
+                 </div>
+             </div>
+         </div>
 
-        <!-- Breadcrumb Section Start -->
-        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
-            <div class="shape-image float-bob-y">
-                <img src="assets/img/vector.png" alt="img">
-            </div>
-            <div class="container">
-                <div class="breadcrumb-wrapper-items">
-                    <div class="page-heading">
-                        <div class="breadcrumb-sub-title">
-                            <h1 class="wow fadeInUp" data-wow-delay=".3s">Contact Us</h1>
-                        </div>
-                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
-                            <li>
-                                <a href="index.html">
-                                Home
-                                </a>
-                            </li>
-                            <li>
-                                <i class="fa-sharp fa-solid fa-slash-forward"></i>
-                            </li>
-                            <li>
-                                Contact Us
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <!-- Breadcrumb Section Start -->
+         <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/breadcrumb-bg.jpg');">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-12">
+                         <div class="breadcrumb-wrapper-items">
+                             <h2>Become a Shipping Partner</h2>
+                             <div class="breadcrumb-sub-title">
+                                 <p>Join our network of trusted logistics partners</p>
+                             </div>
+                             <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                                 <li><a href="index.html">Home</a></li>
+                                 <li>Partner Registration</li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
 
-        <!-- Contact Info Section Start -->
-        <section class="contact-info-section fix section-padding">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>CONTACT US<i class="fa-regular fa-arrow-right-long"></i></h6>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Contact Information</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                        <div class="contact-card-items">
-                            <div class="icon">
-                                <i class="fal fa-location-dot"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Office Address</h3>
-                                <p>
-                                    #1, Nijom Path, SixMile, <br> Guwahati, Assam - 781022
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                        <div class="contact-card-items">
-                            <div class="icon">
-                                <i class="fal fa-envelope"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Email Us</h3>
-                                <a href="mailto:business@etashdeliveries.com">business@etashdeliveries.com</a> <br>
-                                <a href="mailto:info@etashdeliveries.com">info@etashdeliveries.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                        <div class="contact-card-items">
-                            <div class="icon">
-                                <i class="fal fa-phone"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Phone</h3>
-                                <a href="tel:+917099070701">+91-70990-70701</a> <br>
-                                <a href="tel:+916001133233">+91-60011-33233</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+         <!-- Partner Registration Form Section Start -->
+         <section class="contact-form-section section-padding">
+             <div class="container">
+                 <div class="row g-4 justify-content-center">
+                     <div class="col-lg-6">
+                         <div class="contact-form-items">
+                             <div class="section-title">
+                                 <span class="wow fadeInUp">Join Our Network</span>
+                                 <h2 class="wow fadeInUp" data-wow-delay=".3s">Register Your Business as a Shipping Partner</h2>
+                                 <p class="wow fadeInUp" data-wow-delay=".5s">Fill out the form below to become an authorized shipping partner with Etash Deliveries and expand your logistics network.</p>
+                             </div>
+                             <form action="#" id="partner-form" method="POST">
+                                 <div class="row g-4">
+                                     <!-- Business Information -->
+                                     <div class="col-12">
+                                         <h4 class="form-section-title">Business Information</h4>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="business_name" id="business_name" placeholder="Business/Company Name*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="text" name="business_type" id="business_type" placeholder="Business Type (e.g., Logistics, Transport)">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="registration_number" id="registration_number" placeholder="Business Registration Number">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="text" name="gst_number" id="gst_number" placeholder="GST Number">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="business_address" id="business_address" placeholder="Business Address*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="city" id="city" placeholder="City*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="text" name="state" id="state" placeholder="State*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="pincode" id="pincode" placeholder="PIN Code*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="number" name="years_operation" id="years_operation" placeholder="Years in Operation">
+                                         </div>
+                                     </div>
 
-        <!-- Contact Section Start -->
-        <section class="contact-section-22">
-            <div class="container">
-                <div class="contact-form-items">
-                    <div class="title text-center">
-                        <h2 class="wow fadeInUp">Get In Touch</h2>
-                    </div>
-                    <form action="contact.php" id="contact-form" method="POST">
-                        <div class="row g-4">
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="form-clt">
-                                    <input type="text" name="name" id="name" placeholder="Fast Name">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-user"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="form-clt">
-                                    <input type="text" name="name" id="name12" placeholder="Last Name">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-user"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="form-clt">
-                                    <input type="text" name="number" id="number" placeholder="Phone Number">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-phone"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".4s">
-                                <div class="form-clt">
-                                    <input type="text" name="email" id="email3" placeholder="Email Address">
-                                    <div class="icon">
-                                        <i class="fa-regular fa-envelope"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".2s">
-                                <div class="form-clt">
-                                    <textarea name="message" id="message" placeholder="Type your query here"></textarea>
-                                    <div class="icon">
-                                        <i class="fa-sharp fa-light fa-pencil"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".4s">
-                                <button type="submit" class="theme-btn w-100">
-                                    SEND MESSAGE NOW
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contact Info Section Start -->
-        <div class="office-google-map-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+                                     <!-- Contact Information -->
+                                     <div class="col-12">
+                                         <h4 class="form-section-title">Contact Information</h4>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="contact_person" id="contact_person" placeholder="Contact Person Name*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="text" name="designation" id="designation" placeholder="Designation">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="email" name="email" id="email" placeholder="Email Address*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="tel" name="phone" id="phone" placeholder="Phone Number*" required>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="tel" name="alternate_phone" id="alternate_phone" placeholder="Alternate Phone Number">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="url" name="website" id="website" placeholder="Website (if any)">
+                                         </div>
+                                     </div>
 
-        <!-- Brand Section Start -->
-        <div class="brand-section fix section-padding">
-            <div class="container">
-                <div class="swiper brand-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/png-transparent-logo-amazon-com-brand-flipkart-others-text-orange-logo-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/flipkart_official-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/images-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/bigbasket-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/DHL-Emblem-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/640px-MAHINDRA_LOGISTICS_LOGO-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/png-transparent-godrej-group-logo-advertising-godrej-properties-limited-business-mattresse-furniture-company-text-thumbnail-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Amul-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Safexpress_logo-removebg-preview (1) (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/logo_Red-1-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/ferns_petals_loga-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/akshaya (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Excel_Foods-removebg-preview (1).png" alt="img">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/tcpl-removebg-preview (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Axom-Tales-Logo-Black-removebg-preview (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/smfreshy-logo-big-removebg-preview (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Local-removebg-preview (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/Rajudress (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/indinex (1).png" alt="img">
-                            </div> 
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brand-image center">
-                                <img src="assets/img/brand/online-express (1).png" alt="img">
-                            </div> 
-                        </div>                   
-                    </div>
-                </div>
-            </div>
-        </div>
+                                     <!-- Service Information -->
+                                     <div class="col-12">
+                                         <h4 class="form-section-title">Service Information</h4>
+                                     </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="service_areas" id="service_areas" placeholder="Service Areas/Regions Covered">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <select name="services_offered" id="services_offered" class="form-control">
+                                                 <option value="">Select Primary Service*</option>
+                                                 <option value="last_mile">Last Mile Delivery</option>
+                                                 <option value="middle_mile">Middle Mile Transportation</option>
+                                                 <option value="hyperlocal">Hyperlocal Delivery</option>
+                                                 <option value="long_haul">Long Haul Transportation</option>
+                                                 <option value="warehousing">Warehousing</option>
+                                                 <option value="freight_forwarding">Freight Forwarding</option>
+                                                 <option value="air_freight">Air Freight</option>
+                                                 <option value="packers_movers">Packers & Movers</option>
+                                             </select>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="number" name="fleet_size" id="fleet_size" placeholder="Fleet Size (Number of Vehicles)">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="vehicle_types" id="vehicle_types" placeholder="Vehicle Types (e.g., Trucks, Vans, Bikes)">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="number" name="daily_capacity" id="daily_capacity" placeholder="Daily Delivery Capacity">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <input type="text" name="certifications" id="certifications" placeholder="Certifications/Licenses (if any)">
+                                         </div>
+                                     </div>
 
+                                     <!-- Additional Information -->
+                                     <div class="col-12">
+                                         <h4 class="form-section-title">Additional Information</h4>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                         <div class="form-clt">
+                                             <select name="preferred_partnership" id="preferred_partnership" class="form-control">
+                                                 <option value="">Preferred Partnership Type</option>
+                                                 <option value="exclusive">Exclusive Partnership</option>
+                                                 <option value="non_exclusive">Non-Exclusive Partnership</option>
+                                                 <option value="project_based">Project-Based</option>
+                                             </select>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                         <div class="form-clt">
+                                             <input type="text" name="expected_volume" id="expected_volume" placeholder="Expected Monthly Volume">
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                         <div class="form-clt">
+                                             <textarea name="business_description" id="business_description" placeholder="Brief Business Description & Why You Want to Partner with Etash..."></textarea>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
+                                         <div class="form-clt">
+                                             <textarea name="additional_info" id="additional_info" placeholder="Additional Information or Special Requirements..."></textarea>
+                                         </div>
+                                     </div>
+                                     
+                                     <!-- Terms and Submit -->
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".8s">
+                                         <div class="form-check">
+                                             <input type="checkbox" class="form-check-input" id="terms_agreed" name="terms_agreed" required>
+                                             <label class="form-check-label" for="terms_agreed">
+                                                 I agree to the <a href="contact.html">Terms & Conditions</a> and <a href="contact.html">Privacy Policy</a>
+                                             </label>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".9s">
+                                         <button type="submit" class="theme-btn">
+                                             <span>Submit Partnership Application <i class="fa-solid fa-arrow-right-long"></i></span>
+                                         </button>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                     </div>
+                     
+                     </div>
+                 </div>
+             </div>
+         </section>
+                 
+
+        <!-- Footer Section Start -->
         <!-- Footer Section Start -->
         <footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/footer/bg.jpg');">
             <div class="container">
@@ -576,9 +770,9 @@
                             <i class="fa-sharp fa-solid fa-location-dot"></i>
                         </div>
                         <div class="content">
-                            <p>Office location</p>
+                            <p>Office Location</p>
                             <h3>
-                                Nijom Path, Sixmile, Guwahati
+                                Nijom Path, Sixmile, Guwahati-781022
                             </h3>
                         </div>
                     </div>
@@ -587,9 +781,9 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
                         <div class="content">
-                            <p>send email</p>
+                            <p>Send Email</p>
                             <h3>
-                                <a href="mailto:example@gmail.com">business@etashdeliveries.com</a>
+                                <a href="mailto:business@etashdeliveries.com">business@etashdeliveries.com</a>
                             </h3>
                         </div>
                     </div>
@@ -598,9 +792,9 @@
                             <i class="fa-solid fa-phone-volume"></i>
                         </div>
                         <div class="content">
-                            <p>call emergency</p>
+                            <p>Contact Us</p>
                             <h3>
-                                <a href="tel:+88012365499">+91 7099070701</a>
+                                <a href="tel:+917099070701">+91-7099070701</a>
                             </h3>
                         </div>
                     </div>
@@ -614,7 +808,8 @@
                                 </div>
                                 <div class="footer-content">
                                     <p>
-                                        Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding. 
+                                        Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding.
+                                    </p>
                                     <div class="social-icon d-flex align-items-center">
                                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -767,7 +962,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>© All Copyright 2025 by <a href="index.html">EtashDeliveries</p>
+                    <p>© All Copyright 2025 by <a href="index.html">Etash Deliveries</a></p>
                 </div>
             </div>
         </footer> 
@@ -794,7 +989,31 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+  <script>
+            function openApplicationForm() {
+                document.getElementById('applicationForm').style.display = 'block';
+            }
 
+            function closeApplicationForm() {
+                document.getElementById('applicationForm').style.display = 'none';
+            }
+
+            function submitApplication(event) {
+                event.preventDefault();
+                // Here you would typically handle the form submission
+                // For now, we'll just show an alert
+                alert('Thank you for your application! We will contact you soon.');
+                closeApplicationForm();
+            }
+
+            // Close form when clicking outside
+            window.onclick = function(event) {
+                if (event.target == document.getElementById('applicationForm')) {
+                    closeApplicationForm();
+                }
+            }
+        </script>
+        
         <script>
             // Logo Animation Script
             document.addEventListener('DOMContentLoaded', () => {
@@ -821,5 +1040,6 @@
                 }, 3000);
             });
         </script>
+
     </body>
 </html>
