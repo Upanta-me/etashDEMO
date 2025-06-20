@@ -345,7 +345,7 @@
                                                     
                                                 </li>
                                                 <li>
-                                                    <a href="etashvietnam.html">
+                                                    <a href="etashtradingvietnam.html">
                                                         ETASH Vietnam
                                                     </a>
                                                 </li>
@@ -1513,6 +1513,26 @@
 
                     currentLogoIndex = (currentLogoIndex + 1) % logos.length;
                 }, 3000);
+            });
+        </script>
+
+        <script>
+            // Script to increment the 500 number by 5 every 10 seconds
+            document.addEventListener('DOMContentLoaded', function() {
+                setInterval(function() {
+                    // Find the counter for 'Packagaes Fulfilled'
+                    var counters = document.querySelectorAll('.counter-items .count');
+                    for (var i = 0; i < counters.length; i++) {
+                        var parent = counters[i].closest('.counter-items');
+                        if (parent && parent.innerHTML.includes('Packagaes Fulfilled')) {
+                            var current = parseInt(counters[i].textContent);
+                            if (!isNaN(current)) {
+                                counters[i].textContent = current + 5;
+                            }
+                            break;
+                        }
+                    }
+                }, 10000); // every 10 seconds
             });
         </script>
 
