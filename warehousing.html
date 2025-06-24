@@ -31,7 +31,7 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
         <style>
-            /* Logo Animation Styles */
+            /* Logo Animation Styles - Only for header logo */
             .logo-container {
                 position: relative;
                 display: inline-block;
@@ -42,30 +42,30 @@
                 height: auto;
             }
             
-            .logo-img.logo-secondary {
+            .logo-container .logo-img.logo-secondary {
                 position: absolute;
                 top: 0;
                 left: 0;
             }
             
-            .logo-img {
+            .logo-container .logo-img {
                 opacity: 0;
                 transform: scale(1);
                 transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
                 will-change: opacity, transform;
             }
             
-            .logo-img.active {
+            .logo-container .logo-img.active {
                 opacity: 1;
                 transform: scale(1);
             }
             
-            .logo-img.fade-out {
+            .logo-container .logo-img.fade-out {
                 opacity: 0;
                 transform: scale(1.05);
             }
             
-            .logo-img.fade-in {
+            .logo-container .logo-img.fade-in {
                 opacity: 1;
                 transform: scale(1);
             }
@@ -608,33 +608,57 @@
                                 </div>
                                 <ul class="list-area">
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="service.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            What We Do
+                                            All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="lastmile.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Request a Freight
+                                            Last Mile Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="midmile.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Track & Trace
+                                            Mid Mile Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="hyperlocal.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Rail Freight
+                                            Hyperlocal Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="longhaultransportation.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Maritime Transport
+                                            Long Haul Transportation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="warehousing.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Warehousing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="freightforwarding.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Freight Forwarding
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="airfreight.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Air Freight
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="packersnmovers.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Packers & Movers
                                         </a>
                                     </li>
                                 </ul>

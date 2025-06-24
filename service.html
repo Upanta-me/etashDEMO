@@ -31,7 +31,7 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
         <style>
-            /* Logo Animation Styles */
+            /* Logo Animation Styles - Only for header logo */
             .logo-container {
                 position: relative;
                 display: inline-block;
@@ -42,32 +42,77 @@
                 height: auto;
             }
             
-            .logo-img.logo-secondary {
+            .logo-container .logo-img.logo-secondary {
                 position: absolute;
                 top: 0;
                 left: 0;
             }
             
-            .logo-img {
+            .logo-container .logo-img {
                 opacity: 0;
                 transform: scale(1);
                 transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
                 will-change: opacity, transform;
             }
             
-            .logo-img.active {
+            .logo-container .logo-img.active {
                 opacity: 1;
                 transform: scale(1);
             }
             
-            .logo-img.fade-out {
+            .logo-container .logo-img.fade-out {
                 opacity: 0;
                 transform: scale(1.05);
             }
             
-            .logo-img.fade-in {
+            .logo-container .logo-img.fade-in {
                 opacity: 1;
                 transform: scale(1);
+            }
+
+            /* Service Box Alignment Styles */
+            .service-box-items {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+            
+            .service-box-items .service-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .service-box-items .service-content p {
+                flex: 1;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+            
+            .service-box-items .link-btn {
+                margin-top: auto;
+                align-self: flex-start;
+            }
+            
+            .service-section .row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+            }
+            
+            .service-section .col-xl-4,
+            .service-section .col-lg-6,
+            .service-section .col-md-6 {
+                display: flex;
+                margin-bottom: 30px;
+            }
+            
+            @media (max-width: 768px) {
+                .service-box-items {
+                    margin-bottom: 20px;
+                }
             }
         </style>
     </head>
@@ -466,9 +511,8 @@
                                 <a href="airfreight.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        
-                </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
                         <div class="service-box-items items-bg">
                             <div class="service-thumb">
                                 <img src="assets/img/Packers&Movers.jpg" alt="img">
@@ -484,26 +528,25 @@
                                 <a href="packersnmovers.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        
-                </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="1.0s">
                         <div class="service-box-items items-bg">
                             <div class="service-thumb">
                                 <img src="assets/img/SeaFreight.jpg" alt="img">
                                 <div class="icon">
-                                    <i class="fas fa-train"></i>
+                                    <i class="fas fa-ship"></i>
                                 </div>
                             </div>
                             <div class="service-content">
-                                <h3><a href="service-details.html">Sea Freight</a></h3>
+                                <h3><a href="shipping.html">Sea Freight</a></h3>
                                 <p>
+                                    Cost-effective ocean transportation solutions for bulk shipments, connecting global trade routes with comprehensive maritime logistics services.
                                 </p>
-                                <a href="service-details.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="shipping.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        
-                </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="1.2s">
                         <div class="service-box-items items-bg">
                             <div class="service-thumb">
                                 <img src="assets/img/RailFreight.jpg" alt="img">
@@ -512,14 +555,14 @@
                                 </div>
                             </div>
                             <div class="service-content">
-                                <h3><a href="service-details.html">Rail Freight</a></h3>
+                                <h3><a href="truckingind.html">Rail Freight</a></h3>
                                 <p>
+                                    Efficient rail transportation for heavy cargo and bulk shipments, offering eco-friendly and cost-effective solutions for long-distance freight movement.
                                 </p>
-                                <a href="service-details.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="truckingind.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
-                        
-                </div>
+                    </div>
                 
             </div>
         </section>
@@ -740,33 +783,57 @@
                                 </div>
                                 <ul class="list-area">
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="service.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            What We Do
+                                            All Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="lastmile.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Request a Freight
+                                            Last Mile Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="midmile.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Track & Trace
+                                            Mid Mile Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="hyperlocal.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Rail Freight
+                                            Hyperlocal Delivery
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-details.html">
+                                        <a href="longhaultransportation.html">
                                             <i class="fa-solid fa-chevrons-right"></i>
-                                            Maritime Transport
+                                            Long Haul Transportation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="warehousing.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Warehousing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="freightforwarding.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Freight Forwarding
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="airfreight.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Air Freight
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="packersnmovers.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Packers & Movers
                                         </a>
                                     </li>
                                 </ul>

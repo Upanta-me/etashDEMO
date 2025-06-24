@@ -230,7 +230,7 @@
             .submit-btn:hover {
                 background: #0056b3;
             }
-            /* Logo Animation Styles */
+            /* Logo Animation Styles - Only for header logo */
             .logo-container {
                 position: relative;
                 display: inline-block;
@@ -241,30 +241,30 @@
                 height: auto;
             }
             
-            .logo-img.logo-secondary {
+            .logo-container .logo-img.logo-secondary {
                 position: absolute;
                 top: 0;
                 left: 0;
             }
             
-            .logo-img {
+            .logo-container .logo-img {
                 opacity: 0;
                 transform: scale(1);
                 transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
                 will-change: opacity, transform;
             }
             
-            .logo-img.active {
+            .logo-container .logo-img.active {
                 opacity: 1;
                 transform: scale(1);
             }
             
-            .logo-img.fade-out {
+            .logo-container .logo-img.fade-out {
                 opacity: 0;
                 transform: scale(1.05);
             }
             
-            .logo-img.fade-in {
+            .logo-container .logo-img.fade-in {
                 opacity: 1;
                 transform: scale(1);
             }
