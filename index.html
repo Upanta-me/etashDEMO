@@ -151,6 +151,88 @@
                 opacity: 1;
                 transform: scale(1);
             }
+            
+            /* Team Images Mobile Centering Fix */
+            @media (max-width: 991px) {
+                .team-box-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .team-box-items .team-image img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            
+            /* Team Hover Effects Fix */
+            .team-box-items {
+                transition: all 0.3s ease;
+            }
+            
+            /* Default states - ensure elements start in correct state */
+            .team-box-items .social-icon {
+                opacity: 0;
+                visibility: hidden;
+                right: -100px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .team-box-items .team-image::before {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .team-box-items .team-content {
+                background-color: var(--header);
+                transition: all 0.4s ease-in-out;
+            }
+            
+            /* Only apply hover effects on actual :hover - remove .active from conditions */
+            .team-box-items:hover .social-icon {
+                opacity: 1;
+                visibility: visible;
+                right: 0;
+            }
+            
+            .team-box-items:hover .team-image::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .team-box-items:hover .team-content {
+                background-color: var(--theme);
+            }
+            
+            /* Force reset when not hovering - override any conflicting styles */
+            .team-box-items:not(:hover) .social-icon {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                right: -100px !important;
+            }
+            
+            .team-box-items:not(:hover) .team-image::before {
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+            
+            .team-box-items:not(:hover) .team-content {
+                background-color: var(--header) !important;
+            }
         </style>
     </head>
     <body>
@@ -1021,7 +1103,7 @@
                             <div class="team-content">
                                 <h5><a href="team-details.html">Capt Mridumoy Dutta</a></h5>
                                 <p>Managing Director</p>
-                                <a href="team-details" class="icon"><i class="fa-solid fa-link"></i></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -1039,7 +1121,7 @@
                             <div class="team-content">
                                 <h5><a href="team-details.html">Dipankar Phukan</a></h5>
                                 <p>Co-Founder</p>
-                                <a href="team-details" class="icon"><i class="fa-solid fa-link"></i></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -1057,7 +1139,7 @@
                             <div class="team-content">
                                 <h5><a href="team-details.html">Saurav Jakhar</a></h5>
                                 <p>Co-Founder</p>
-                                <a href="team-details" class="icon"><i class="fa-solid fa-link"></i></a>
+                                
                             </div>
                         </div>
                     </div>
@@ -1461,7 +1543,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>© All Copyright 2025 by <a href="index.html">Etash Deliveries</a></p>
+                    <p>© All Copyright 2025 by <a href="index.html">Etash Deliveries</a> Developed by <a href="https://gitcservices.com/">GITCS</a></p>
                 </div>
             </div>
         </footer> 
