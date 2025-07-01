@@ -76,6 +76,14 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 30px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+            
+            .service-box-items:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             }
             
             .service-box-items .service-content {
@@ -94,6 +102,15 @@
             .service-box-items .link-btn {
                 margin-top: auto;
                 align-self: flex-start;
+                pointer-events: none;
+            }
+            
+            /* Prevent text selection when clicking the card */
+            .service-box-items * {
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
             }
             
             .service-section .row {
@@ -549,17 +566,17 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="1.2s">
                         <div class="service-box-items items-bg">
                             <div class="service-thumb">
-                                <img src="assets/img/RailFreight.jpg" alt="img">
+                                <img src="assets/img/rail-unsplash.jpg" alt="img">
                                 <div class="icon">
                                     <i class="fas fa-train"></i>
                                 </div>
                             </div>
                             <div class="service-content">
-                                <h3><a href="truckingind.html">Rail Freight</a></h3>
+                                <h3><a href="railfreight.html">Rail Freight</a></h3>
                                 <p>
                                     Efficient rail transportation for heavy cargo and bulk shipments, offering eco-friendly and cost-effective solutions for long-distance freight movement.
                                 </p>
-                                <a href="truckingind.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="railfreight.html" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -957,6 +974,38 @@
 
                     currentLogoIndex = (currentLogoIndex + 1) % logos.length;
                 }, 3000);
+            });
+
+            // Service Card Click Handler
+            document.addEventListener('DOMContentLoaded', () => {
+                const serviceCards = document.querySelectorAll('.service-box-items');
+                
+                serviceCards.forEach(card => {
+                    card.addEventListener('click', (e) => {
+                        // Find the link within the card
+                        const link = card.querySelector('.service-content h3 a, .link-btn');
+                        if (link) {
+                            const href = link.getAttribute('href');
+                            if (href) {
+                                // Navigate to the service page
+                                window.location.href = href;
+                            }
+                        }
+                    });
+
+                    // Add visual feedback on mouse down
+                    card.addEventListener('mousedown', () => {
+                        card.style.transform = 'translateY(-2px)';
+                    });
+
+                    card.addEventListener('mouseup', () => {
+                        card.style.transform = '';
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = '';
+                    });
+                });
             });
         </script>
     </body>
