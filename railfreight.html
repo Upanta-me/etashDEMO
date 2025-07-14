@@ -63,6 +63,66 @@
                 opacity: 1;
                 transform: scale(1);
             }
+            /* Team Images Mobile Centering Fix */
+            @media (min-width: 1200px) {
+                .header-top-wrapper-2 .top-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 32px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 18px;
+                    white-space: nowrap;
+                    margin-right: 24px;
+                }
+                .header-top-wrapper-2 .text-list li {
+                    white-space: nowrap;
+                }
+                .header-top-wrapper-2 .social-icon {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-left: 24px;
+                    margin-right: 14px;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .header-top-wrapper-2 .top-right {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 0;
+                }
+                .team-box-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .team-box-items .team-image img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
         </style>
     </head>
     <body>
@@ -138,9 +198,9 @@
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -163,10 +223,9 @@
                             <li><a href="contact.html">Terms & Conditions</a></li>
                         </ul>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -325,7 +384,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="single-sidebar-widget">
+                            <!-- <div class="single-sidebar-widget">
                                 <div class="wid-title">
                                     <h3>Download</h3>
                                 </div>
@@ -335,14 +394,14 @@
                                 </div>
                                 <div class="brochures-download-items">
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                        </div>
                    </div>
                </div>
             </div>
         </section>
-        <!-- ...existing code for footer, scripts, and logo animation... -->
+        <!-- Footer Section Start -->
         <footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/footer/bg.jpg');">
             <div class="container">
                 <div class="contact-info-area">
@@ -367,7 +426,7 @@
                         <div class="content">
                             <p>send email</p>
                             <h3>
-                                <a href="mailto:business@etashdeliveries.com">business@etashdeliveries.com</a>
+                                <a href="mailto:example@gmail.com">business@etashdeliveries.com</a>
                             </h3>
                         </div>
                     </div>
@@ -378,7 +437,7 @@
                         <div class="content">
                             <p>call emergency</p>
                             <h3>
-                                <a href="tel:+917099070701">+91 7099070701</a>
+                                <a href="tel:+88012365499">+91 7099070701</a>
                             </h3>
                         </div>
                     </div>
@@ -386,8 +445,190 @@
                 <div class="footer-widgets-wrapper">
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>About Company</h5>
+                                </div>
+                                <div class="footer-content">
+                                    <p>
+                                        Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding. 
+                                    <div class="social-icon d-flex align-items-center">
+                                        <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Quick Link</h5>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="about.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Blog & News
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            FAQ'S
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Login / Register
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                             <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Our Services</h5>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="service.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            All Services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="lastmile.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Last Mile Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="midmile.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Mid Mile Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="hyperlocal.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Hyperlocal Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="longhaultransportation.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Long Haul Transportation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="warehousing.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Warehousing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="freightforwarding.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Freight Forwarding
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="airfreight.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Air Freight
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="packersnmovers.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Packers & Movers
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Instagram</h5>
+                                </div>
+                                <div class="footer-gallery">
+                                    <div class="gallery-wrap">
+                                        <div class="gallery-item">
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-1.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-1.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-2.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-2.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-3.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-3.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-4.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-4.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-5.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-5.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-6.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-6.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© All Copyright 2025 by <a href="index.html">EtashDeliveries</a> Developed by <a href="https://gitcservices.com/">GITCS</a><p>
                 </div>
             </div>
         </footer>

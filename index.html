@@ -158,21 +158,37 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
-                    gap: 32px; /* Increase gap between text-list and social icons */
+                    gap: 32px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 18px;
+                    white-space: nowrap;
+                    margin-right: 24px;
+                }
+                .header-top-wrapper-2 .text-list li {
+                    white-space: nowrap;
                 }
                 .header-top-wrapper-2 .social-icon {
                     display: flex !important;
                     align-items: center;
-                    justify-content: center; /* This centers the icons horizontally */
-                    gap: 16px; /* Optional: space between icons */
-                    width: 100%; /* Ensures it uses the available space */
-                }
-                .header-top-wrapper-2 .text-list {
-                    margin-right: 55px; /* Push text-list to the left */
+                    justify-content: center;
+                    gap: 30px;
+                    margin-left: 24px;
+                    margin-right: 14px;
                 }
             }
 
             @media (max-width: 991px) {
+                .header-top-wrapper-2 .top-right {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 0;
+                }
                 .team-box-items {
                     display: flex;
                     flex-direction: column;
@@ -251,6 +267,88 @@
             
             .team-box-items:not(:hover) .team-content {
                 background-color: var(--header) !important;
+            }
+
+            /* Make team images circular */
+            .team-box-items .team-image img {
+                border-radius: 50%;
+                object-fit: cover;
+                width: 160px;   /* Adjust as needed */
+                height: 160px;  /* Adjust as needed */
+                border: 4px solid #fff; /* Optional: white border for better look */
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            }
+
+            /* Hide all social icons by default */
+            .team-box-items .social-icon a {
+                display: none;
+            }
+
+            /* Only show LinkedIn icon on hover */
+            .team-box-items:hover .social-icon a:first-child {
+                display: inline-block;
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.3s;
+            }
+
+            /* Optionally, always show LinkedIn on hover, hide others */
+            .team-box-items .social-icon a:first-child {
+                /* LinkedIn icon (first child) */
+                display: none;
+            }
+
+            .team-box-items:hover .social-icon a:first-child {
+                display: inline-block;
+            }
+
+            .team-box-items .social-icon a[href*="linkedin"] {
+                display: none;
+            }
+            .team-box-items:hover .social-icon a[href*="linkedin"] {
+                display: inline-block;
+            }
+
+            /* Team Section: Make team images larger and add spacing above title */
+            .team-box-items .team-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 24px; /* Add space below image */
+            }
+            .team-box-items .team-image img {
+                border-radius: 50%;
+                object-fit: cover;
+                width: 200px;   /* Larger image */
+                height: 200px;  /* Larger image */
+                border: 4px solid #fff;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+                display: block;
+            }
+            .team-box-items .team-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: auto; /* Let content define width */
+                margin: 0 auto;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            .team-box-items .team-content h5,
+            .team-box-items .team-content p {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: auto; /* Only as wide as content */
+                display: block;
+            }
+            @media (max-width: 575px) {
+                .team-box-items .team-image img,
+                .team-box-items .team-content {
+                    width: 140px;
+                    height: 140px;
+                }
             }
         </style>
     </head>
@@ -370,9 +468,9 @@
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -405,9 +503,9 @@
                             <li><a href="contact.html">Terms & Conditions</a></li>
                         </ul>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
                             
 
@@ -1108,17 +1206,17 @@
                     <h2 class="wow fadeInUp" data-wow-delay=".2s">BOARD OF DIRECTORS</h2>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="team-box-items">
-                            <div class="social-icon d-grid align-items-center">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </div> 
-                            <div class="team-image">
-                                <img src="assets/img/team/MDSir (2) (1).jpg" alt="img">
-                            </div>
+                                <div class="social-icon d-grid align-items-center">
+                                    <a href="https://www.linkedin.com/in/capt-mridumoy-dutta-89504a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                                    <!-- <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                                </div>
+                                <div class="team-image">
+                                    <img  src="assets/img/team/MDSir (2) (1).jpg" alt="img">
+                                </div>
                             <div class="team-content">
                                 <h5><a href="team-details.html">Capt Mridumoy Dutta</a></h5>
                                 <p>Managing Director</p>
@@ -1129,10 +1227,10 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="team-box-items active">
                             <div class="social-icon d-grid align-items-center">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/dipankar-phukan-957725122?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                                <!-- <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a> -->
                             </div>
                             <div class="team-image">
                                 <img  src="assets/img/team/DPsir (2) (1).jpg" alt="img">
@@ -1147,10 +1245,10 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
                         <div class="team-box-items">
                             <div class="social-icon d-grid align-items-center">
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/in/saurav-jakhar-877173a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                                <!-- <a href="#"><i class="fab fa-twitter"></i></a>
                                 <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a> -->
                             </div>
                             <div class="team-image">
                                 <img src="assets/img/team/SJ (1).jpg" alt="img">
@@ -1273,21 +1371,22 @@
                     <button class="array-next"><i class="fa-solid fa-arrow-right-long"></i></button>
                 </div>
                 <div class="swiper testimonial-slider-2">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper id="google-reviews-wrapper">
+                        
                         <div class="swiper-slide">
-                            <div class="testimonial-card-items">
+                            <div class="testimonial-card-items style-2">
                                 <div class="shape-img">
                                     <img src="assets/img/testimonial/shape-left.png" alt="img">
                                 </div>
                                 <p>
-                                    Etash Deliveries has been instrumental in transforming our logistics operations. Their professional service, timely deliveries, and excellent customer support have made them our preferred logistics partner.
+                                    Great service, much better than other delivery company.
                                 </p>
                                 <div class="client-info-items">
                                     <div class="client-info">
                                         <img src="assets/img/testimonial/client-4.png" alt="img">
                                         <div class="content">
-                                            <h4>Rajesh Kumar</h4>
-                                            <span>Operations Manager, Amazon</span>
+                                            <h4>Biswajit Adhikary</h4>
+                                            
                                             <div class="star">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -1297,7 +1396,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/img/testimonial/amazon.png" alt="img">
+                                    
                                 </div>
                             </div>
                         </div>
@@ -1307,14 +1406,14 @@
                                     <img src="assets/img/testimonial/shape-right.png" alt="img">
                                 </div>
                                 <p>
-                                    The team at Etash has consistently delivered exceptional service. Their commitment to customer satisfaction and efficient logistics solutions has helped us streamline our operations significantly.
+                                    Highly recommend for both personal and business shipping needs.
                                 </p>
                                 <div class="client-info-items">
                                     <div class="client-info">
                                         <img src="assets/img/testimonial/client-5.png" alt="img">
                                         <div class="content">
-                                            <h4>Priya Sharma</h4>
-                                            <span>Supply Chain Director, Flipkart</span>
+                                            <h4>Prandeep Deka</h4>
+                                            
                                             <div class="star">
                                                 <i class="fa-solid fa-star"></i>
                                                 <i class="fa-solid fa-star"></i>
@@ -1324,8 +1423,37 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="assets/img/testimonial/envato.png" alt="img">
+                                    
                                 </div>
+                                
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-card-items style-2">
+                                <div class="shape-img">
+                                    <img src="assets/img/testimonial/shape-right.png" alt="img">
+                                </div>
+                                <p>
+                                    Trusty and constructed services. Great behaviour.
+                                </p>
+                                <div class="client-info-items">
+                                    <div class="client-info">
+                                        <img src="assets/img/testimonial/client-6.png" alt="img">
+                                        <div class="content">
+                                            <h4>bitopan baruah</h4>
+                                            
+                                            <div class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -1387,9 +1515,9 @@
                                         Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding.
                                     </p>
                                     <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>

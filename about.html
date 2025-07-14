@@ -69,6 +69,67 @@
                 opacity: 1;
                 transform: scale(1);
             }
+
+            /* Team Images Mobile Centering Fix */
+            @media (min-width: 1200px) {
+                .header-top-wrapper-2 .top-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 32px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 18px;
+                    white-space: nowrap;
+                    margin-right: 24px;
+                }
+                .header-top-wrapper-2 .text-list li {
+                    white-space: nowrap;
+                }
+                .header-top-wrapper-2 .social-icon {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-left: 24px;
+                    margin-right: 14px;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .header-top-wrapper-2 .top-right {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 0;
+                }
+                .team-box-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .team-box-items .team-image img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
         </style>
     </head>
     <body>
@@ -186,9 +247,9 @@
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -221,10 +282,9 @@
                             <li><a href="contact.html">Terms & Conditions</a></li>
                         </ul>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             
 
                         </div>
@@ -382,8 +442,28 @@
                                         Exceeding customer expectations
                                     </li>
                                 </ul>
-                                </div>
+                                
                             </div>
+                            <div class="main-sidebar">
+                                <div class="single-sidebar-widget">
+                                  <div class="wid-title">
+                                    <h3>Download</h3>
+                                  </div>
+                                  <div class="brochures-download-items">
+                                    <div class="brochures-items">
+                                      <div class="icon">
+                                        <i class="fal fa-file-pdf"></i>
+                                      </div>
+                                      <div class="content">
+                                        <h5>Our Brochure</h5>
+                                        <p>Download</p>
+                                      </div>
+                                    </div>
+                                    <a href="assets/Etash_Brochure.pdf" class="download-btn"><i class="fa-light fa-download"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -496,7 +576,7 @@
                                                         <path d="M20 4V28L32 16V4H20Z" fill="#F55B1F"/>
                                                     </svg>
                                                     <h4>
-                                                        Good experience and kind behaviour of delivery boys thanks, i am receiving my product in good condition.
+                                                        Great service, much better than other delivery company.
                                                     </h4>
                                                 </div>
                                             </div>
@@ -509,7 +589,7 @@
                                                         <path d="M20 4V28L32 16V4H20Z" fill="#F55B1F"/>
                                                     </svg>
                                                     <h4>
-                                                        Great service, much better than other delivery company.
+                                                        Highly recommend for both personal and business shipping needs.
                                                     </h4>
                                                 </div>
                                             </div>
@@ -532,13 +612,13 @@
                                 <div class="client-img-items">
                                     <div class="client-image-area">
                                         <div class="client-img">
-                                            <img src="assets/img/testimonial/client-1.png" alt="img">
+                                            <img src="assets/img/testimonial/client-4.png" alt="img">
                                         </div>
                                         <div class="client-img">
-                                            <img src="assets/img/testimonial/client-2.png" alt="img">
+                                            <img src="assets/img/testimonial/client-5.png" alt="img">
                                         </div>
                                         <div class="client-img">
-                                            <img src="assets/img/testimonial/client-3.png" alt="img">
+                                            <img src="assets/img/testimonial/client-6.png" alt="img">
                                         </div>
                                     </div>
                                     <div class="array-button">
@@ -720,9 +800,9 @@
                                     <p>
                                         Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding. 
                                     <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>

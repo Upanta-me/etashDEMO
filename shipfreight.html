@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
+    <head>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="Transko - Transport & Logistics HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>Etash Deliveries - Rail Freight</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="assets/img/etashlogo2.png">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="assets/css/color.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            /* Logo Animation Styles - Only for header logo */
+            .logo-container {
+                position: relative;
+                display: inline-block;
+            }
+            .logo-container .logo-img {
+                width: 100%;
+                height: auto;
+            }
+            .logo-container .logo-img.logo-secondary {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .logo-container .logo-img {
+                opacity: 0;
+                transform: scale(1);
+                transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                will-change: opacity, transform;
+            }
+            .logo-container .logo-img.active {
+                opacity: 1;
+                transform: scale(1);
+            }
+            .logo-container .logo-img.fade-out {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+            .logo-container .logo-img.fade-in {
+                opacity: 1;
+                transform: scale(1);
+            }
+            /* Team Images Mobile Centering Fix */
+            @media (min-width: 1200px) {
+                .header-top-wrapper-2 .top-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 32px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 18px;
+                    white-space: nowrap;
+                    margin-right: 24px;
+                }
+                .header-top-wrapper-2 .text-list li {
+                    white-space: nowrap;
+                }
+                .header-top-wrapper-2 .social-icon {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-left: 24px;
+                    margin-right: 14px;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .header-top-wrapper-2 .top-right {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 0;
+                }
+                .team-box-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .team-box-items .team-image img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Preloader Start -->
+        <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="E" class="letters-loading">E</span>
+                    <span data-text-preloader="T" class="letters-loading">T</span>
+                    <span data-text-preloader="A" class="letters-loading">A</span>
+                    <span data-text-preloader="S" class="letters-loading">S</span>
+                    <span data-text-preloader="H" class="letters-loading">H</span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-left"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+                    <div class="col-3 loader-section section-right"><div class="bg"></div></div>
+                </div>
+            </div>
+        </div>
+        <!--<< Mouse Cursor Start >>-->
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+        <!-- Back To Top Start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/etashlogo2.png" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block"></p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon"><i class="fal fa-map-marker-alt"></i></div>
+                                    <div class="offcanvas__contact-text"><a target="_blank" href="#">Nijom Path, Sixmile, Guwahati-781022</a></div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15"><i class="fal fa-envelope"></i></div>
+                                    <div class="offcanvas__contact-text"><a href="mailto:business@etashdeliveries.com"><span class="mailto:business@etashdeliveries.com">business@etashdeliveries.com</span></a></div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15"><i class="fal fa-clock"></i></div>
+                                    <div class="offcanvas__contact-text"><a target="_blank" href="#">Mon-Sat, 09:30am-06:30pm</a></div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15"><i class="far fa-phone"></i></div>
+                                    <div class="offcanvas__contact-text"><a href="tel:+11002345909">+91-7099070701</a></div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="contact.html" class="theme-btn text-center">
+                                    <span>Get A Quote<i class="fa-solid fa-arrow-right-long"></i></span>
+                                </a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+        <!-- Header Section Start -->
+        <header class="header-section-2">
+            <div class="container-fluid">
+                <div class="header-top-wrapper-2">
+                    <ul class="contact-list">
+                        <li><i class="far fa-envelope"></i><a href="business@etashdeliveries.com">business@etashdeliveries.com</a></li>
+                        <li><i class="fa-sharp fa-solid fa-location-dot"></i>#1, Nijom Path, SixMile, Guwahati, Assam</li>
+                        <li><i class="fa-regular fa-phone"></i><a href="tel:+91-70990-70701">+91-70990-70701</a></li>
+                    </ul>
+                    <div class="top-right">
+                        <ul class="text-list">
+                            <li><a href="contact.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Terms & Conditions</a></li>
+                        </ul>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="header-sticky" class="header-2">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main">
+                            <div class="header-left">
+                                <div class="logo">
+                                    <a href="index.html" class="header-logo">
+                                        <div class="logo-container">
+                                            <img src="assets/img/logo/etashlogo.png" alt="Etash Logo Green" class="logo-img logo-primary active">
+                                            <img src="assets/img/alternate_etashlogo.png" alt="Etash Logo Blue-Orange" class="logo-img logo-secondary">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header-right d-flex justify-content-end align-items-center">
+                                <div class="mean__menu-wrapper">
+                                    <div class="main-menu">
+                                        <nav id="mobile-menu">
+                                            <ul>
+                                                <li class="active"><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="service.html">Services</a><ul class="submenu"></ul></li>
+                                                <li><a href="etashtradingvietnam.html">ETASH Vietnam</a></li>
+                                                <li><a href="career.html">Careers</a></li>
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="header-button">
+                                    <a href="contact.html" class="theme-btn">TRACK DELIVERY <i class="fa-regular fa-arrow-right"></i></a>
+                                </div>
+                                <div class="search-item">
+                                    <a href="#"><img style="width: 40px; height: 40px;" src="./assets/img/1559863.png" alt=""> </a>
+                                    <div class="header__hamburger d-xl-block my-auto">
+                                        <div class="sidebar__toggle">
+                                            <i class="fas fa-bars"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Breadcrumb Section Start -->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/sh.jpg');">
+            <div class="shape-image float-bob-y">
+                <img src="assets/img/vector.png" alt="img">
+            </div>
+            <div class="container">
+                <div class="breadcrumb-wrapper-items">
+                    <div class="page-heading">
+                        <div class="breadcrumb-sub-title">
+                            <h1 class="wow fadeInUp" data-wow-delay=".3s">Sea Freight</h1>
+                        </div>
+                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                            <li>
+                                <a href="index.html">
+                                Home
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                            </li>
+                            <li>
+                                Services Details
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service Details Section Start -->
+        <section class="service-details-section section-padding">
+            <div class="container">
+               <div class="service-details-wrapper">
+                   <div class="row g-4">
+                       <div class="col-12 col-lg-8">
+                           <div class="service-details-image">
+                               <img src="assets/img/ship-unsplash.jpg" alt="Rail Freight">
+                           </div>
+                           <div class="service-details-content">
+                               <h2>Sea Freight</h2>
+                               <h3>Global, Reliable & Cost-Efficient Ocean Cargo Solutions</h3>
+                               <p>Etash’s Sea Freight Services provide comprehensive and flexible solutions for transporting goods across international waters. Leveraging a vast network of shipping lines and global ports, we ensure your cargo reaches its destination safely, efficiently, and at competitive rates. Our sea logistics are ideal for businesses of all sizes, offering both Full Container Load (FCL) and Less than Container Load (LCL) options to suit diverse shipping needs.</p>
+                               <p class="mt-4 mb-4">With advanced tracking systems, strong relationships with major carriers, and a team of maritime logistics experts, we guarantee the security and timely delivery of your shipments. Our services include door-to-door pickup and delivery, customs clearance, multimodal transport integration, and tailored solutions for oversized or specialized cargo. Sea freight is the most economical choice for large-volume shipments and supports sustainable global trade.</p>
+                               <div class="row g-4">
+                                   <div class="col-lg-7">
+                                       <div class="service-details-image">
+                                           <img src="assets/img/SeaFreight.jpg" alt="Sea Cargo" style="width:100%;height:auto;border-radius:8px;">
+                                       </div>
+                                   </div>
+                                   <div class="col-lg-5">
+                                       <div class="content">
+                                        <p class="mt-2 mb-2">Choose Etash Sea Freight for dependable, scalable, and cost-effective international cargo movement across the globe.</p>
+                                       </div>
+                                       <ul class="details-list">
+                                        </ul>
+                                   </div>
+                               </div>
+                               <div class="row g-4 mt-2">
+                                  <div class="col-xl-4 col-lg-6 col-md-6">
+                                       <div class="service-details-box">
+                                           <div class="icon">
+                                               
+                                               <i class="fas fa-globe" style="color:#1976d2; font-size: 28px; margin-left:10px;"></i>
+                                               <h5>Global Reach</h5>
+                                           </div>
+                                        </div>
+                                  </div>
+                                  <div class="col-xl-4 col-lg-6 col-md-6">
+                                   <div class="service-details-box">
+                                       <div class="icon">
+                                           
+                                           <i class="fas fa-ship" style="color:#388e3c; font-size: 28px; margin-left:10px;"></i>
+                                           <h5>Large Capacity</h5>
+                                       </div>
+                                   </div>
+                              </div>
+                              <div class="col-xl-4 col-lg-6 col-md-6">
+                               <div class="service-details-box">
+                                   <div class="icon">
+                                       
+                                       <i class="fas fa-dollar-sign" style="color:#2e7d32; font-size: 28px; margin-left:10px;"></i>
+                                       <h5>Cost-Efficient</h5>
+                                   </div></div>
+                          </div>
+                               </div>
+                            </div>
+                       </div>
+                       <div class="col-12 col-lg-4">
+                        <div class="main-sidebar">
+                            <div class="single-sidebar-widget">
+                                <div class="search-widget">
+                                    <form action="#">
+                                        <input type="text" placeholder="Search">
+                                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="single-sidebar-widget">
+                                <div class="wid-title">
+                                    <h3>Categories</h3>
+                                </div>
+                                <div class="news-widget-categories">
+                                    <ul>
+                                        <li><a href="service-details.html">Last Mile Delivery</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                        <li><a href="service-details.html">Middle Mile Delivery</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                        <li><a href="service-details.html">HyperLocal Delivery</a><span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                        <li><a href="service-details.html">Long Haul Transportation</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                        <li><a href="service-details.html">Warehousing</a> <span><i class="fa-regular fa-arrow-right-long"></i></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="single-sidebar-widget">
+                                <div class="wid-title">
+                                    <h3>Download</h3>
+                                </div>
+                                <div class="brochures-download-items">
+                                    <div class="brochures-items">
+                                    </div>
+                                </div>
+                                <div class="brochures-download-items">
+                                </div>
+                            </div> -->
+                        </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </section>
+        <!-- Footer Section Start -->
+        <footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/footer/bg.jpg');">
+            <div class="container">
+                <div class="contact-info-area">
+                    <a href="index.html" class="logo-img wow fadeInUp" data-wow-delay=".2s">
+                        <img src="assets/img/logo/etashlogo.png" alt="img">
+                    </a>
+                    <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="content">
+                            <p>Office location</p>
+                            <h3>
+                                Nijom Path, Sixmile, Guwahati
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="contact-info-items wow fadeInUp" data-wow-delay=".6s">
+                        <div class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="content">
+                            <p>send email</p>
+                            <h3>
+                                <a href="mailto:example@gmail.com">business@etashdeliveries.com</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="contact-info-items wow fadeInUp" data-wow-delay=".8s">
+                        <div class="icon">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="content">
+                            <p>call emergency</p>
+                            <h3>
+                                <a href="tel:+88012365499">+91 7099070701</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-widgets-wrapper">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>About Company</h5>
+                                </div>
+                                <div class="footer-content">
+                                    <p>
+                                        Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding. 
+                                    <div class="social-icon d-flex align-items-center">
+                                        <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Quick Link</h5>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="about.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="news.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Blog & News
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            FAQ'S
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Login / Register
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".6s">
+                             <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Our Services</h5>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="service.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            All Services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="lastmile.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Last Mile Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="midmile.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Mid Mile Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="hyperlocal.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Hyperlocal Delivery
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="longhaultransportation.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Long Haul Transportation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="warehousing.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Warehousing
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="freightforwarding.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Freight Forwarding
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="airfreight.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Air Freight
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="packersnmovers.html">
+                                            <i class="fa-solid fa-chevrons-right"></i>
+                                            Packers & Movers
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".8s">
+                            <div class="single-footer-widget">
+                                <div class="widget-head">
+                                    <h5>Instagram</h5>
+                                </div>
+                                <div class="footer-gallery">
+                                    <div class="gallery-wrap">
+                                        <div class="gallery-item">
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-1.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-1.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-2.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-2.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-3.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-3.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="gallery-item">
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-4.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-4.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-5.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-5.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="thumb">
+                                                <a href="assets/img/footer/gallery-6.jpg" class="img-popup">
+                                                    <img src="assets/img/footer/gallery-6.jpg" alt="gallery-img">
+                                                    <div class="icon">
+                                                        <i class="far fa-plus"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© All Copyright 2025 by <a href="index.html">EtashDeliveries</a> Developed by <a href="https://gitcservices.com/">GITCS</a><p>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/viewport.jquery.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <script src="assets/js/jquery.waypoints.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            // Logo Animation Script
+            document.addEventListener('DOMContentLoaded', () => {
+                const primaryLogo = document.querySelector('.logo-primary');
+                const secondaryLogo = document.querySelector('.logo-secondary');
+                const logos = [primaryLogo, secondaryLogo];
+                let currentLogoIndex = 0;
+                if (!primaryLogo || !secondaryLogo) return;
+                setInterval(() => {
+                    const currentLogo = logos[currentLogoIndex];
+                    const nextLogo = logos[(currentLogoIndex + 1) % logos.length];
+                    currentLogo.classList.remove('active', 'fade-in');
+                    currentLogo.classList.add('fade-out');
+                    setTimeout(() => {
+                        nextLogo.classList.remove('fade-out');
+                        nextLogo.classList.add('active', 'fade-in');
+                    }, 100);
+                    currentLogoIndex = (currentLogoIndex + 1) % logos.length;
+                }, 3000);
+            });
+        </script>
+    </body>
+</html>

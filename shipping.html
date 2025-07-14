@@ -189,6 +189,40 @@
              .form-check-label a:hover {
                  text-decoration: underline;
              }
+
+             /* General style for all form inputs and selects */
+            .form-clt input,
+            .form-clt select.form-control {
+                background: #f4f7fa;
+                border: none;
+                border-radius: 6px;
+                padding: 18px 20px;
+                font-size: 16px;
+                color: #333;
+                width: 100%;
+                margin-bottom: 0;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                transition: border 0.2s;
+            }
+
+            /* Add a dropdown arrow (consistent with design) */
+            .form-clt select.form-control {
+                background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+                background-repeat: no-repeat;
+                background-position: right 20px center;
+                background-size: 16px 16px;
+            }
+
+            /* On focus (for both inputs and selects) */
+            .form-clt input:focus,
+            .form-clt select.form-control:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px #e8f2ff;
+            }
+
              
              .contact-info-area .contact-info-items {
                  background: #f8f9fa;
@@ -225,6 +259,9 @@
                  padding: 3px 0;
                  color: #666;
              }
+             .contact-form-items {
+                margin-bottom: 0;
+            }
              
              /* Breadcrumb Text Visibility */
              .breadcrumb-wrapper {
@@ -296,6 +333,66 @@
                  margin-left: 15px;
                  color: #f8f9fa;
              }
+             /* Team Images Mobile Centering Fix */
+            @media (min-width: 1200px) {
+                .header-top-wrapper-2 .top-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 32px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 18px;
+                    white-space: nowrap;
+                    margin-right: 24px;
+                }
+                .header-top-wrapper-2 .text-list li {
+                    white-space: nowrap;
+                }
+                .header-top-wrapper-2 .social-icon {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 30px;
+                    margin-left: 24px;
+                    margin-right: 14px; /* Increase this value as needed */
+                }
+            }
+
+            @media (max-width: 991px) {
+                .header-top-wrapper-2 .top-right {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 10px;
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 0;
+                }
+                .team-box-items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                }
+            }
+            
+            @media (max-width: 575px) {
+                .team-box-items .team-image {
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+                .team-box-items .team-image img {
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
          </style>
     </head>
     <body>
@@ -415,9 +512,9 @@
                                 </a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
@@ -450,10 +547,9 @@
                             <li><a href="contact.html">Terms & Conditions</a></li>
                         </ul>
                         <div class="social-icon d-flex align-items-center">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                             
 
                         </div>
@@ -666,20 +762,20 @@
                                              <input type="text" name="service_areas" id="service_areas" placeholder="Service Areas/Regions Covered">
                                          </div>
                                      </div>
-                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                         <div class="form-clt">
-                                             <select name="services_offered" id="services_offered" class="form-control">
-                                                 <option value="">Select Primary Service*</option>
-                                                 <option value="last_mile">Last Mile Delivery</option>
-                                                 <option value="middle_mile">Middle Mile Transportation</option>
-                                                 <option value="hyperlocal">Hyperlocal Delivery</option>
-                                                 <option value="long_haul">Long Haul Transportation</option>
-                                                 <option value="warehousing">Warehousing</option>
-                                                 <option value="freight_forwarding">Freight Forwarding</option>
-                                                 <option value="air_freight">Air Freight</option>
-                                                 <option value="packers_movers">Packers & Movers</option>
-                                             </select>
-                                         </div>
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                        <div class="form-clt">
+                                            <select name="services_offered" id="services_offered" class="form-control">
+                                              <option value="">Select Primary Service*</option>
+                                              <option value="last_mile">Last Mile Delivery</option>
+                                              <option value="middle_mile">Middle Mile Transportation</option>
+                                              <option value="hyperlocal">Hyperlocal Delivery</option>
+                                              <option value="long_haul">Long Haul Transportation</option>
+                                              <option value="warehousing">Warehousing</option>
+                                              <option value="freight_forwarding">Freight Forwarding</option>
+                                              <option value="air_freight">Air Freight</option>
+                                              <option value="packers_movers">Packers & Movers</option>
+                                            </select>
+                                          </div>                                          
                                      </div>
                                      <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
                                          <div class="form-clt">
@@ -691,7 +787,7 @@
                                              <input type="text" name="vehicle_types" id="vehicle_types" placeholder="Vehicle Types (e.g., Trucks, Vans, Bikes)">
                                          </div>
                                      </div>
-                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
                                          <div class="form-clt">
                                              <input type="number" name="daily_capacity" id="daily_capacity" placeholder="Daily Delivery Capacity">
                                          </div>
@@ -706,7 +802,7 @@
                                      <div class="col-12">
                                          <h4 class="form-section-title">Additional Information</h4>
                                      </div>
-                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
                                          <div class="form-clt">
                                              <select name="preferred_partnership" id="preferred_partnership" class="form-control">
                                                  <option value="">Preferred Partnership Type</option>
@@ -716,7 +812,7 @@
                                              </select>
                                          </div>
                                      </div>
-                                     <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                     <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
                                          <div class="form-clt">
                                              <input type="text" name="expected_volume" id="expected_volume" placeholder="Expected Monthly Volume">
                                          </div>
@@ -811,9 +907,9 @@
                                         Etash Deliveries provides complete logistics solutions from warehousing to transportation and freight forwarding.
                                     </p>
                                     <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-instagram"></i></a>
-                                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.facebook.com/share/19SniJhYTJ/"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/etash_deliveries?igsh=cXI2MDA5c281cDRj"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://www.linkedin.com/company/etash-delivery-technologies-pvt-ltd/"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
                                 </div>
                             </div>
