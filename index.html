@@ -153,6 +153,25 @@
             }
             
             /* Team Images Mobile Centering Fix */
+            @media (min-width: 1200px) {
+                .header-top-wrapper-2 .top-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 32px; /* Increase gap between text-list and social icons */
+                }
+                .header-top-wrapper-2 .social-icon {
+                    display: flex !important;
+                    align-items: center;
+                    justify-content: center; /* This centers the icons horizontally */
+                    gap: 16px; /* Optional: space between icons */
+                    width: 100%; /* Ensures it uses the available space */
+                }
+                .header-top-wrapper-2 .text-list {
+                    margin-right: 55px; /* Push text-list to the left */
+                }
+            }
+
             @media (max-width: 991px) {
                 .team-box-items {
                     display: flex;
@@ -389,7 +408,7 @@
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
                             
 
                         </div>
