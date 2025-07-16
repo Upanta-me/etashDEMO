@@ -130,6 +130,184 @@
                     display: block;
                 }
             }
+            /* Team Hover Effects Fix */
+            .team-box-items {
+                transition: all 0.3s ease;
+            }
+            
+            /* Default states - ensure elements start in correct state */
+            .team-box-items .social-icon {
+                opacity: 0;
+                visibility: hidden;
+                right: -100px;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .team-box-items .team-image::before {
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease-in-out;
+            }
+            
+            .team-box-items .team-content {
+                background-color: var(--header);
+                transition: all 0.4s ease-in-out;
+            }
+            
+            /* Only apply hover effects on actual :hover - remove .active from conditions */
+            .team-box-items:hover .social-icon {
+                opacity: 1;
+                visibility: visible;
+                right: 0;
+            }
+            
+            .team-box-items:hover .team-image::before {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .team-box-items:hover .team-content {
+                background-color: var(--theme);
+            }
+            
+            /* Force reset when not hovering - override any conflicting styles */
+            .team-box-items:not(:hover) .social-icon {
+                opacity: 0 !important;
+                visibility: hidden !important;
+                right: -100px !important;
+            }
+            
+            .team-box-items:not(:hover) .team-image::before {
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+            
+            .team-box-items:not(:hover) .team-content {
+                background-color: var(--header) !important;
+            }
+
+            /* Make team images circular */
+            .team-box-items .team-image img {
+                border-radius: 50%;
+                object-fit: cover;
+                width: 160px;   /* Adjust as needed */
+                height: 160px;  /* Adjust as needed */
+                border: 4px solid #fff; /* Optional: white border for better look */
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            }
+
+            /* Hide all social icons by default */
+            .team-box-items .social-icon a {
+                display: none;
+            }
+
+            /* Only show LinkedIn icon on hover */
+            .team-box-items:hover .social-icon a:first-child {
+                display: inline-block;
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.3s;
+            }
+
+            /* Optionally, always show LinkedIn on hover, hide others */
+            .team-box-items .social-icon a:first-child {
+                /* LinkedIn icon (first child) */
+                display: none;
+            }
+
+            .team-box-items:hover .social-icon a:first-child {
+                display: inline-block;
+            }
+
+            .team-box-items .social-icon a[href*="linkedin"] {
+                display: none;
+            }
+            .team-box-items:hover .social-icon a[href*="linkedin"] {
+                display: inline-block;
+            }
+            /* Move Swiper pagination below the team slider */
+            .team-section .swiper-pagination {
+                position: static !important;
+                margin-top: 30px;
+                text-align: center;
+            }
+
+            /* Team Section: Make team images larger and add spacing above title */
+            .team-box-items .team-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 16px; /* Add space below image */
+            }
+            .team-box-items .team-image img {
+                border-radius: 50%;
+                object-fit: cover;
+                width: 200px;   /* Larger image */
+                height: 200px;  /* Larger image */
+                border: 4px solid #fff;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+                display: block;
+            }
+            .team-box-items .team-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: auto; /* Let content define width */
+                margin: 0 auto;
+                background: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            .team-content p {
+    margin-bottom: 0.2em;
+}
+
+.team-content p + p {
+    margin-top: 0.5em; /* Adds space between designation and department/role */
+}
+.team-content p i {
+    display: block;
+    margin-top: 0.5em;
+}
+            .team-box-items .team-content h5,
+            .team-box-items .team-content p {
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: auto; /* Only as wide as content */
+                display: block;
+            }
+            @media (max-width: 575px) {
+                .team-box-items .team-image img,
+                .team-box-items .team-content {
+                    width: 140px;
+                    height: 140px;
+                }
+            }
+        </style>
+        <style>
+            /* Spacing fix between Achievements, Team, and Brand sections */
+            .achivements-section {
+                margin-bottom: 60px;
+            }
+            /* Remove margin-bottom from team-section to avoid extra gap */
+            .brand-section {
+                margin-top: -100px;
+            }
+            @media (max-width: 991px) {
+                .achivements-section {
+                    margin-bottom: 40px;
+                }
+                .brand-section {
+                    margin-top: 0px;
+                }
+            }
+            /* Limit team slider width and center */
+            .team-slider .row.justify-content-center {
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
         </style>
     </head>
     <body>
@@ -546,7 +724,7 @@
             </div>
         </section>
 
-        <!-- Testimonial Section Start -->
+        <!-- Testimonial Section Start
         <section class="testimonial-section fix section-padding section-bg">
             <div class="arrow-shape float-bob-y">
                 <img src="assets/img/testimonial/arrow-shape.png" alt="img">
@@ -632,10 +810,130 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Team Section Start -->
-        
+
+        <section class="team-section section-padding pt-0" style="position: relative;">
+            <div class="container">
+                <div class="swiper team-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1: Our Team -->
+                        <div class="swiper-slide">
+                            <div class="section-title text-center">
+                                <!-- <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>OUR TEAM<i class="fa-regular fa-arrow-right-long"></i></h6> -->
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">OUR TEAM</h2>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="team-box-items">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/raj-kumar-gupta-34b73922a/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/RG.jpeg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Rajkumar Gupta</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Fleet</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="team-box-items active">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/manoj-chettri-09a709156/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/MC.jpeg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Manoj Chettri</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Operations(Amazon)</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="team-box-items">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/debojit-borah-3932b7147/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/DB.jpeg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Debojit Borah</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Operations(Flipkart)</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Our Team (placeholders) -->
+                        <div class="swiper-slide">
+                            <div class="section-title text-center">
+                                <!-- <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>OUR LEADERS<i class="fa-regular fa-arrow-right-long"></i></h6> -->
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">OUR TEAM</h2>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="team-box-items">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/subir-debnath-862b272a0/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/SD.jpeg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Subir Debnath</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Finance & Accounts</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="team-box-items active">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/monowara-begum-7ba7b510b/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/MB.jpg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Manowara Begum</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Human Resources</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="team-box-items">
+                                        <div class="social-icon d-grid align-items-center">
+                                            <a href="https://www.linkedin.com/in/liang-tham-8979b8205/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div class="team-image">
+                                            <img src="assets/img/team/LST.jpeg" alt="img">
+                                        </div>
+                                        <div class="team-content">
+                                            <h5><a>Liang S. Tham</a></h5>
+                                            <p>Deputy Manager</p>
+                                            <p><i>Information Technology</i></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Swiper navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
 
         <!-- Brand Section Start -->
         <div class="brand-section fix section-padding">
@@ -1027,6 +1325,30 @@
 
                     currentLogoIndex = (currentLogoIndex + 1) % logos.length;
                 }, 3000);
+            });
+
+            // Team Swiper Slider Initialization
+            document.addEventListener('DOMContentLoaded', function() {
+                if (window.Swiper) {
+                    new Swiper('.team-slider', {
+                        loop: true,
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        slidesPerView: 1,
+                        effect: 'slide',
+                        autoHeight: true,
+                        autoplay: {
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        },
+                    });
+                }
             });
         </script>
     </body>

@@ -22,8 +22,11 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-$sql = 'SELECT * FROM applications ORDER BY created_at DESC';
-$result = $conn->query($sql);
+// Query for candidate applications
+$candidate_result = $conn->query("SELECT * FROM applications ORDER BY created_at DESC");
+
+// Query for partnership applications
+$partner_result = $conn->query("SELECT * FROM partnership_applications ORDER BY created_at DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +35,11 @@ $result = $conn->query($sql);
     <title>Admin Panel - Etash Deliveries</title>
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="shortcut icon" href="assets/img/etashlogo2.png">
+    <style>
+        table { border-collapse: collapse; width: 100%; margin-bottom: 40px; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #eee; }
+    </style>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -183,6 +191,7 @@ $result = $conn->query($sql);
             <a href="?logout=1" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
         <div class="table-responsive">
+        <h1>Candidate Applications</h1>    
         <table>
             <tr>
                 <th>Candidate Name</th>
@@ -194,8 +203,8 @@ $result = $conn->query($sql);
                 <th>Location</th>
                 <th>Submitted At</th>
             </tr>
-            <?php if ($result && $result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
+            <?php if ($candidate_result && $candidate_result->num_rows > 0): ?>
+                <?php while ($row = $candidate_result->fetch_assoc()): ?>
                     <tr>
                         <td><?= htmlspecialchars($row['candidate_name']) ?></td>
                         <td><?= htmlspecialchars($row['educational_qualification']) ?></td>
@@ -204,6 +213,73 @@ $result = $conn->query($sql);
                         <td><?= htmlspecialchars($row['alternate_phone_number']) ?></td>
                         <td><a class="download-link" href="download_cv.php?id=<?= $row['id'] ?>" target="_blank">Download</a></td>
                         <td><?= htmlspecialchars($row['location']) ?></td>
+                        <td><?= htmlspecialchars($row['created_at']) ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <tr><td colspan="8">No applications found.</td></tr>
+            <?php endif; ?>
+        </table>
+        <h2>Partnership Applications</h2>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>ID</th>
+                <th>Business Name</th>
+                <th>Business Type</th>
+                <th>Registration Number</th>
+                <th>GST Number</th>
+                <th>Business Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Pincode</th>
+                <th>Years in Operation</th>
+                <th>Contact Person</th>
+                <th>Designation</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Alternate Phone</th>
+                <th>Website</th>
+                <th>Service Areas</th>
+                <th>Services Offered</th>
+                <th>Fleet Size</th>
+                <th>Vehicle Types</th>
+                <th>Daily Capacity</th>
+                <th>Certifications</th>
+                <th>Preferred Partnership</th>
+                <th>Expected Volume</th>
+                <th>Business Description</th>
+                <th>Additional Info</th>
+                <th>Created At</th>
+            </tr>
+            <?php if ($partner_result && $partner_result->num_rows > 0): ?>
+                <?php while ($row = $partner_result->fetch_assoc()): ?>
+                    <tr>
+                        <td><?= $row['id'] ?></td>
+                        <td><?= htmlspecialchars($row['business_name']) ?></td>
+                        <td><?= htmlspecialchars($row['business_type']) ?></td>
+                        <td><?= htmlspecialchars($row['registration_number']) ?></td>
+                        <td><?= htmlspecialchars($row['gst_number']) ?></td>
+                        <td><?= htmlspecialchars($row['business_address']) ?></td>
+                        <td><?= htmlspecialchars($row['city']) ?></td>
+                        <td><?= htmlspecialchars($row['state']) ?></td>
+                        <td><?= htmlspecialchars($row['pincode']) ?></td>
+                        <td><?= htmlspecialchars($row['years_operation']) ?></td>
+                        <td><?= htmlspecialchars($row['contact_person']) ?></td>
+                        <td><?= htmlspecialchars($row['designation']) ?></td>
+                        <td><?= htmlspecialchars($row['email']) ?></td>
+                        <td><?= htmlspecialchars($row['phone']) ?></td>
+                        <td><?= htmlspecialchars($row['alternate_phone']) ?></td>
+                        <td><?= htmlspecialchars($row['website']) ?></td>
+                        <td><?= htmlspecialchars($row['service_areas']) ?></td>
+                        <td><?= htmlspecialchars($row['services_offered']) ?></td>
+                        <td><?= htmlspecialchars($row['fleet_size']) ?></td>
+                        <td><?= htmlspecialchars($row['vehicle_types']) ?></td>
+                        <td><?= htmlspecialchars($row['daily_capacity']) ?></td>
+                        <td><?= htmlspecialchars($row['certifications']) ?></td>
+                        <td><?= htmlspecialchars($row['preferred_partnership']) ?></td>
+                        <td><?= htmlspecialchars($row['expected_volume']) ?></td>
+                        <td><?= htmlspecialchars($row['business_description']) ?></td>
+                        <td><?= htmlspecialchars($row['additional_info']) ?></td>
                         <td><?= htmlspecialchars($row['created_at']) ?></td>
                     </tr>
                 <?php endwhile; ?>

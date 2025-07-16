@@ -1160,6 +1160,27 @@
                 }, 3000);
             });
         </script>
-
+        <script>
+            document.getElementById('partner-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var form = this;
+                var formData = new FormData(form);
+            
+                fetch('submit_partnership.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Thank you! Your partnership application has been submitted.');
+                        form.reset();
+                    } else {
+                        alert('Submission failed: ' + data.message);
+                    }
+                })
+                .catch(() => alert('An error occurred. Please try again.'));
+            });
+            </script>
     </body>
 </html>
